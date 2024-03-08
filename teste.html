@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Busca nome" onclick="nome()" />
+    <h1 id="root"></h1>
+
+    <script>
+        const nomes = ["alexandre", "jose", "joao", "jose", "pedro"]
+        
+        function nome() {
+            var valor = prompt("Digite o Valor");
+            var x = buscaSequencial(nomes, valor)
+            document.getElementById("root").innerHTML = x;
+        }
+        
+          function buscaSequencial(vetor, valorBusca) {
+            for (let i = 0; i < vetor.length; i++) {
+              if (vetor[i] === valorBusca) return i;
+            }
+            return -1;
+          }
+        </script>
+  </body>
+</html>
