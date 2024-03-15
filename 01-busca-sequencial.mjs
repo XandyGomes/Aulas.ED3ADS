@@ -1,6 +1,8 @@
+let comps
 function buscaSequencial(vetor, valorBusca){
-
+    comps = 0
     for(let i = 0; i < vetor.length; i++ ){
+        comps++
         if(vetor[i] === valorBusca ) return i  
     }
     return -1
@@ -15,5 +17,5 @@ function buscaSequencial(vetor, valorBusca){
 
 import { nomes } from './data/vetor-nomes.mjs'
 
-console.log("Posição de ALEXANDRE: ",buscaSequencial(nomes, "ALEXANDRE"))
+console.log("Posição de ALEXANDRE: ",buscaSequencial(nomes, "ALEXANDRE"), "Comparações: ",comps )
 
