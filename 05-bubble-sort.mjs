@@ -32,9 +32,12 @@ function bubbleSort(vetor) {
 // Melhor caso
 //let nums = [ 0, 11, 22, 33, 44, 55, 66, 77, 88, 99 ]
 
+// console.time("Tempo de ordenação")
 // bubbleSort(nums)
+// let memoriaMB = process.memoryUsage().heapUsed / 1024 / 1024
+// console.timeEnd("Tempo de ordenação")
 // console.log(nums)
-// console.log({pass, comps, trocas})
+// console.log({pass, comps, trocas, memoriaMB})
 
 /***************************************************************/
 
@@ -42,7 +45,8 @@ import { nomes } from './data/nomes-desord.mjs'
 
 console.time('Tempo de ordenação')
 bubbleSort(nomes)
+let memoriaMB = process.memoryUsage().heapUsed / 1024 / 1024
 console.timeEnd('Tempo de ordenação')
 
 console.log(nomes)
-console.log({pass, comps, trocas})
+console.log({pass, comps, trocas, memoriaMB})
